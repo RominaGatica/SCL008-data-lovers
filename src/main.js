@@ -7,7 +7,8 @@ container.innerHTML ="";
 //filtro por debilidad de pokemon//
 
 const showData = (data) => {
-    container.innerHTML += data.forEach(element => {`<div class="col-sm-12 col-md-4 col-lg-3"><div class="card" id="drawcards">
+    container.innerHTML += 
+    data.forEach(element => {`<div class="col-sm-12 col-md-4 col-lg-3"><div class="card" id="drawcards">
         <img src="${element.img}" class="card-img-top" alt="${element.weaknesses}">
         <div class="card-body">
         <p class="card-text">${element.name}</p>
@@ -98,7 +99,39 @@ result.sort(element => {
 })
 });
 
+//Porcentaje de candys para evolucionar//
+
+/*const candyCount = (data) => {
+    data.forEach(element => {
+    container.innerHTML += `<div class="col-sm col-md-4 col-lg-3"><div class="card" id="drawcards">
+        <img src="${element.img}" class="card-img-top" alt="${element.candy_count}">
+        <div class="card-body">
+        <p class="card-text">${element.candy_count}</p>
+        <p class="card-text">${element.name}</p>
+        </div>
+        </div>`
+})
+};
+
+document.getElementById('select-candy_count').addEventListener('change', () => {
+    let candys = document.getElementById('select-candy_count').value;
+    let result = window.countCandy(data,candys);
+
+
+container.innerHTML ="";
+result.forEach(element => {
+            container.innerHTML += `<div class="col-sm col-md-4 col-lg-3"><div class="card" id="drawcards">
+            <img src="${element.img}" class="card-img-top" alt="${element.candy_count}">
+            <div class="card-body">
+            <p class="card-text">${element.candy_count}</p>
+            <p class="card-text">${element.name}</p>
+            </div>
+            </div>`
+    })
+    });*/
+ 
 window.onload = showData2(data);
 window.onload = showData(data);
 window.onload = sortData2(data); 
+//window.onload = candyCount(data);//
 

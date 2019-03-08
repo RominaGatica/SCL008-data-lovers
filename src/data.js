@@ -35,7 +35,9 @@ function sortBy (a,b){
 }
 
 
+
 window.sortData = sortData;
 window.filterData = filterData;
 window.filterDataType = filterDataType;
+
 
